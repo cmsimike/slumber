@@ -29,6 +29,14 @@ To Use Digest or OAuth please consult the requests documentation. The auth
 argument is passed directly to requests and thus works exactly the same way
 and accepts exactly the same arguments.
 
+If you have an API key that you must provide on every request to the api,
+you can specify a dict of default parameters that will always be sent along
+with each call. Specify the defauly parameters like::
+
+    api = slumber.API("http://path/to/my/api/", default_params=dict(key='12345'))
+
+And slumber will always send the default parameters along with each request.
+
 Serializer
 ==========
 
